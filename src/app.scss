@@ -1,0 +1,29 @@
+html,
+body {
+    margin: 0;
+    overscroll-behavior: none;
+}
+
+body {
+    background-color: #161616;
+    color: white;
+    font-family: "Geist Variable", sans-serif;
+}
+
+button {
+    all: unset;
+
+    text-align: center;
+    font-size: 14px;
+
+    flex-grow: 1;
+    border: 1px solid #323232;
+    background-color: #202020;
+    color: white;
+    padding: 6px 0;
+
+    transition: opacity 0.2s ease;
+    &:active {
+        opacity: 0.5;
+    }
+}

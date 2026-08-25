@@ -1,0 +1,15 @@
+{
+  "name": "driftc",
+  "type": "module",
+  "version": "0.1.0",
+  "files": [
+    "driftc_bg.wasm",
+    "driftc.js",
+    "driftc.d.ts"
+  ],
+  "main": "driftc.js",
+  "types": "driftc.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
