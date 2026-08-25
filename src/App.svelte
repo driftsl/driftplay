@@ -3,6 +3,7 @@
     import init, { compile } from "./wasm/driftc.js";
     import { hash as driftcHash } from "./wasm/meta.js";
     import logo from "./assets/logo.svg";
+    import githubLogo from "./assets/github.svg";
 
     const exampleShaders = [
         {
@@ -241,7 +242,12 @@ void main() {
             <img alt="logo" src={logo} />
         </a>
 
-        <span class="version">driftc {driftcHash.substring(0, 7)}</span>
+        <div class="right">
+            <span class="version">driftc {driftcHash.substring(0, 7)}</span>
+            <a title="driftc github" href="https://github.com/driftsl/driftc">
+                <img alt="github" src={githubLogo} />
+            </a>
+        </div>
     </header>
     <main>
         <div class="inputs">
@@ -308,8 +314,20 @@ void main() {
             }
         }
 
-        > .version {
+        > .right {
             opacity: 0.5;
+
+            display: flex;
+            gap: 8px;
+
+            > a {
+                display: flex;
+            }
+
+            img {
+                width: 18px;
+                aspect-ratio: 1;
+            }
         }
     }
 
